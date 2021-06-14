@@ -33,7 +33,7 @@ public class RandomFactsAboutMeServlet extends HttpServlet {
   private String convertToJson(FactAboutMe fact) {
     StringBuilder json = new StringBuilder();
     
-    json.append("{ factAboutMe: ");
+    json.append("{");
     json.append("\"pathImage\": ");
     json.append("\"" + fact.getPathImage() + "\"");
     json.append(",");
