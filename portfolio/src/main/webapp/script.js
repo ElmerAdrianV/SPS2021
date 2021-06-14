@@ -26,6 +26,7 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+//Training of fecth()
 async function addGreetingElmer(){
 
     const responseFromServer = await fetch('/hello');
@@ -34,4 +35,58 @@ async function addGreetingElmer(){
     const dateContainer = document.getElementById('greeting-container');
     dateContainer.innerText = textFromResponse;
     
+}
+/** Fetches stats from the server and adds them to the page. */
+async function getRandomFactAboutMeEN(){
+    const responseFromServer = await fetch('/randomFactsAboutMe');
+    const listFacts = await responseFromServer.json();
+    const factContainer = document.getElementById('fact-container');
+    console.log(listFacts.length);
+    
+    const fact = listFacts.factsInEN[Math.floor(Math.random() * (listFacts.length-1))];
+    
+    factContainer.innerHTML='';
+    factContainer.appendChild(
+        createImagesElement(fact.pathImage, fact.altAttribute)
+    );
+
+    factContainer.appendChild(
+        createParagraphElement(fact.factText)
+    );
+    
+}
+
+/** Fetches stats from the server and adds them to the page. */
+async function getRandomFactAboutMeES(){
+    const responseFromServer = await fetch('/randomFactsAboutMe');
+    const listFacts = await responseFromServer.json();
+    const factContainer = document.getElementById('fact-container');
+    
+    const fact = listFacts.factsInES[Math.floor(Math.random() * (listFacts.length-1))];
+    
+    factContainer.innerHTML='';
+    factContainer.appendChild(
+        createImagesElement(fact.pathImage, fact.altAttribute)
+    );
+
+    factContainer.appendChild(
+        createParagraphElement(fact.factText)
+    );
+    
+}
+
+
+/** Creates an <img> element*/
+function createImagesElement(path, altAttribute) {
+  const imgElement = document.createElement('img');
+    imgElement.setAttribute('src', path);
+    imgElement.setAttribute('alt', altAttribute);
+    imgElement.setAttribute('style', 'width:150px; height:150px');
+  return imgElement;
+}
+/** Creates an <p> element containing text. */
+function createParagraphElement(text) {
+  const pElement = document.createElement('p');
+  pElement.innerText = text;
+  return pElement;
 }
