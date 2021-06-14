@@ -33,9 +33,9 @@ public class RandomFactsAboutMeServlet extends HttpServlet {
     factsAboutMeES.add( new FactAboutMe("images/logof1.png", "F1 logo","Desde 2020, soy fan de la Formula 1"));
     factsAboutMeES.add( new FactAboutMe("images/18number.png", "18 Number","Tengo 18 años de edad"));
     factsAboutMeES.add( new FactAboutMe("images/birthdayCake.png", "Birthday cake","Mi cumpleaños es el 7 de Agosto"));
-    factsAboutMeES.add( new FactAboutMe("images/ninaGP.png", "Guinea pig","Mi mascota es un cuyo llamdo Nina"));
+    factsAboutMeES.add( new FactAboutMe("images/ninaGP.jpeg", "Guinea pig","Mi mascota es un cuyo llamdo Nina"));
     factsAboutMeES.add( new FactAboutMe("images/footballer.png", "footballer", "Mi sueño frustado es ser futbolista"));
-    factsAboutMeES.add( new FactAboutMe("images/elmer-elephant.png", "Elmer elephant", "Un elefante, un famoso cantante latino, una caricatura de Looney Toons y yo nos llamamos Elmer"));
+    factsAboutMeES.add( new FactAboutMe("images/elmer-elephant.jpg", "Elmer elephant", "Un elefante, un famoso cantante latino, una caricatura de Looney Toons y yo nos llamamos Elmer"));
     factsAboutMeES.add( new FactAboutMe("images/brokenBone.png", "Broken bone", "Nunca me he roto un hueso"));
     factsAboutMeES.add( new FactAboutMe("images/teacher.png", "Teacher Icon","De niño nunca quise enseñar. Ahora, adoro dar clases."));
     //Select randomly a fact in the arrayList
