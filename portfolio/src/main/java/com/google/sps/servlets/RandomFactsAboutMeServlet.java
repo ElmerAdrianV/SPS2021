@@ -21,23 +21,26 @@ public class RandomFactsAboutMeServlet extends HttpServlet {
     // Add FactsAboutMe;
     factsAboutMe.add( new FactAboutMe("images/logof1.png", "I'm a F1 fans since 2020"));
     
-    String json = convertToJsonUsingGson( factsAboutMe );
+    //Select randomly a fact in the arrayList
+    int index = Math.round( (float) Math.random()*factsAboutMe.size() );
+    FactAboutMe fact = factsAboutMe.get(index);
+    String json = convertToJson( fact );
 
     response.setContentType("application/json;");
     response.getWriter().println(json);
   }
 
-  private String convertToJsonUsingGson(ArrayList<FactAboutMe> factsAboutMe) {
-    Gson gson = new Gson();
+  private String convertToJson(FactAboutMe fact) {
     StringBuilder json = new StringBuilder();
-    json.append("{ facts: [ ");
     
-    for(FactAboutMe fact : factsAboutMe){
-        json.append( gson.toJson(fact) + ",");
-    }
+    json.append("{ factAboutMe: ");
+    json.append("\"pathImage\": ");
+    json.append("\"" + fact.getPathImage() + "\"");
+    json.append(",");
+    json.append("\"fact\": ");
+    json.append("\"" + fact.getFact() + "\"");
+    json.append("}");
 
-    json.append("]\n}");
-    
     return json.toString();
   }
 }
