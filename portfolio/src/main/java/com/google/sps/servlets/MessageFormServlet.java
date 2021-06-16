@@ -26,13 +26,6 @@ public class MessageFormServlet extends HttpServlet {
             System.out.println("TOPIC: " + topicValue);
             System.out.println("MESSAGE: " + messageValue);
 
-            // Print the value so you can see it in the server logs.
-            System.out.println("You submitted: ");
-            System.out.println("NAME: " + nameValue);
-            System.out.println("EMAIL: " + emailValue);
-            System.out.println("TOPIC: " + topicValue);
-            System.out.println("MESSAGE: " + messageValue);
-
             // Write the value to the response so the user can see it.
             response.getWriter().println("You submitted: ");
             response.getWriter().println("NAME: " + nameValue);
