@@ -30,14 +30,14 @@ public class RandomFactsAboutMeServlet extends HttpServlet {
     factsAboutMeEN.add( new FactAboutMe("images/teacher.png", "Teacher Icon","As a child he hates teaching, now I love being a teacher."));
     
     // Add FactsAboutMeES in spanish;
-    factsAboutMeES.add( new FactAboutMe("images/logof1.png", "F1 logo","Desde 2020, soy fan de la Formula 1"));
-    factsAboutMeES.add( new FactAboutMe("images/18number.png", "18 Number","Tengo 18 años de edad"));
-    factsAboutMeES.add( new FactAboutMe("images/birthdayCake.png", "Birthday cake","Mi cumpleaños es el 7 de Agosto"));
-    factsAboutMeES.add( new FactAboutMe("images/ninaGP.jpeg", "Guinea pig","Mi mascota es un cuyo llamdo Nina"));
-    factsAboutMeES.add( new FactAboutMe("images/footballer.png", "footballer", "Mi sueño frustado es ser futbolista"));
-    factsAboutMeES.add( new FactAboutMe("images/elmer-elephant.jpg", "Elmer elephant", "Un elefante, un famoso cantante latino, una caricatura de Looney Toons y yo nos llamamos Elmer"));
-    factsAboutMeES.add( new FactAboutMe("images/brokenBone.png", "Broken bone", "Nunca me he roto un hueso"));
-    factsAboutMeES.add( new FactAboutMe("images/teacher.png", "Teacher Icon","De niño nunca quise enseñar. Ahora, adoro dar clases."));
+    factsAboutMeES.add( new FactAboutMe("images/logof1.png", "Logo F1","Desde 2020, soy fan de la Formula 1"));
+    factsAboutMeES.add( new FactAboutMe("images/18number.png", "Número 18","Tengo 18 años de edad"));
+    factsAboutMeES.add( new FactAboutMe("images/birthdayCake.png", "Pastel de cumpleaños","Mi cumpleaños es el 7 de Agosto"));
+    factsAboutMeES.add( new FactAboutMe("images/ninaGP.jpeg", "Cuyo","Mi mascota es un cuyo llamdo Nina"));
+    factsAboutMeES.add( new FactAboutMe("images/footballer.png", "Futbolista", "Mi sueño frustado es ser futbolista"));
+    factsAboutMeES.add( new FactAboutMe("images/elmer-elephant.jpg", "Elmer el elefante", "Un elefante, un famoso cantante latino, una caricatura de Looney Toons y yo nos llamamos Elmer"));
+    factsAboutMeES.add( new FactAboutMe("images/brokenBone.png", "Hueso Roto", "Nunca me he roto un hueso"));
+    factsAboutMeES.add( new FactAboutMe("images/teacher.png", "Icono de profesor","De niño nunca quise enseñar. Ahora, adoro dar clases."));
     //Select randomly a fact in the arrayList
     String json = convertToJson( factsAboutMeEN, factsAboutMeES );
 
