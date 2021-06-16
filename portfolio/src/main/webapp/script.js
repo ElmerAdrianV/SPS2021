@@ -37,14 +37,17 @@ async function addGreetingElmer(){
     
 }
 
-/** Fetches stats from the server and adds them to the page. */
-async function getRandomFactAboutMeEN(){
+/** Fetches facts from the server and adds them to the page.//Abstracting in a single function the language of the facts */
+async function getRandomFactAboutMe(){
     const responseFromServer = await fetch('/randomFactsAboutMe');
     const listFacts = await responseFromServer.json();
     const factContainer = document.getElementById('fact-container');
-    console.log(listFacts.length);
     
-    const fact = listFacts.factsInEN[Math.floor(Math.random() * (listFacts.length-1))];
+    var fact;
+    if(factContainer.getAttribute("value") == 'EN')
+         fact = listFacts.factsInEN[Math.floor(Math.random() * (listFacts.length-1))];
+    else
+        fact = listFacts.factsInES[Math.floor(Math.random() * (listFacts.length-1))];
     
     factContainer.innerHTML='';
     factContainer.appendChild(
@@ -53,30 +56,8 @@ async function getRandomFactAboutMeEN(){
 
     factContainer.appendChild(
         createParagraphElement(fact.factText)
-    );
-    
+    );   
 }
-
-/** Fetches stats from the server and adds them to the page. */
-async function getRandomFactAboutMeES(){
-    const responseFromServer = await fetch('/randomFactsAboutMe');
-    const listFacts = await responseFromServer.json();
-    const factContainer = document.getElementById('fact-container');
-    
-    const fact = listFacts.factsInES[Math.floor(Math.random() * (listFacts.length-1))];
-    
-    factContainer.innerHTML='';
-    factContainer.appendChild(
-        createImagesElement(fact.pathImage, fact.altAttribute)
-    );
-
-    factContainer.appendChild(
-        createParagraphElement(fact.factText)
-    );
-    
-}
-
-
 /** Creates an <img> element*/
 function createImagesElement(path, altAttribute) {
   const imgElement = document.createElement('img');
