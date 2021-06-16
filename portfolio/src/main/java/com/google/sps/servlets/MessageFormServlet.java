@@ -18,7 +18,7 @@ public class MessageFormServlet extends HttpServlet {
         final String topicValue = request.getParameter("topic-input");
         final String messageValue = request.getParameter("message-input");
 
-        if (nameValue != null && emailValue != null && topicValue != null && messageValue != null) {
+        if (nameValue.equals("") && emailValue.equals("") && topicValue.equals("") && messageValue .equals("") {
             // Print the value so you can see it in the server logs.
             System.out.println("You submitted: ");
             System.out.println("NAME: " + nameValue);
