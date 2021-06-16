@@ -26,3 +26,49 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+// Adds a greeting to me into the page. (for training)
+async function addGreetingElmer(){
+
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+
+    const dateContainer = document.getElementById('greeting-container');
+    dateContainer.innerText = textFromResponse;
+    
+}
+
+/** Fetches facts from the server and adds them to the page.//Abstracting in a single function the language of the facts */
+async function getRandomFactAboutMe(){
+    const responseFromServer = await fetch('/randomFactsAboutMe');
+    const listFacts = await responseFromServer.json();
+    const factContainer = document.getElementById('fact-container');
+    
+    var fact;
+    if(factContainer.getAttribute("value") == 'EN')
+         fact = listFacts.factsInEN[Math.floor(Math.random() * (listFacts.length-1))];
+    else
+        fact = listFacts.factsInES[Math.floor(Math.random() * (listFacts.length-1))];
+    
+    factContainer.innerHTML='';
+    factContainer.appendChild(
+        createImagesElement(fact.pathImage, fact.altAttribute)
+    );
+
+    factContainer.appendChild(
+        createParagraphElement(fact.factText)
+    );   
+}
+/** Creates an <img> element*/
+function createImagesElement(path, altAttribute) {
+  const imgElement = document.createElement('img');
+    imgElement.setAttribute('src', path);
+    imgElement.setAttribute('alt', altAttribute);
+    imgElement.setAttribute('style', 'width:150px; height:150px');
+  return imgElement;
+}
+/** Creates an <p> element containing text. */
+function createParagraphElement(text) {
+  const pElement = document.createElement('p');
+  pElement.innerText = text;
+  return pElement;
+}

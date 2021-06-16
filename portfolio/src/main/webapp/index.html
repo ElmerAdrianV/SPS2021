@@ -1,49 +1,63 @@
 <!DOCTYPE html>
-<html "lang"= "en">
-  <head>
+<html "lang"="en">
+
+<head>
     <meta charset="UTF-8">
     <title>ElmerAdrianV's Portfolio </title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>    
-  </head>    
-  
-  <body>
+    <script src="script.js"></script>
+</head>
+
+<body>
     <div id="content">
         <section>
-        <h1>A short introduction about me</h1>
-        <img src= "images/presentation photo.png" alt= "Me in Mexico City" style = "width:240px; height:320px">
-        <p> I'm Elmer Ortega, originally from Matamoros, <abbr title = "Tamaulipas" >Tamps</abbr>, 
-            <abbr title="México"> MX </abbr>. I'm studying a dual bachelor in Applied Mathematics and Computer Engineering 
-            at <a href= "https://itam.mx"> <abbr title = "Instituto 
-                Tecnológico Autónomo de México"> ITAM </abbr> </a>.Currently participate in <a href="https://buildyourfuture.withgoogle.com/programs/softwareproductsprint/">Software Product Sprint by Google</a>.
-        </p>
+            <h1>A short introduction about me</h1>
+            <img src="images/presentation_photo.png" alt="Me in Mexico City" style="width:240px; height:320px">
+            <p> I'm Elmer Ortega, originally from Matamoros, <abbr title="Tamaulipas">Tamps</abbr>,
+                <abbr title="México"> MX </abbr>. I'm studying a dual bachelor in Applied Mathematics and Computer
+                Engineering
+                at <a href="https://itam.mx"> <abbr title="Instituto 
+                Tecnológico Autónomo de México"> ITAM </abbr> </a>.Currently participate in <a
+                    href="https://buildyourfuture.withgoogle.com/programs/softwareproductsprint/">Software Product
+                    Sprint by Google</a>.
+            </p>
         </section>
 
         <section>
             <h2>My projects </h2>
             <ul>
-                <li><h3>Socials: </h3></li>
+                <li>
+                    <h3>Socials: </h3>
+                </li>
 
                 <ul>
-                    <li>  (2019) <b> First Mathematics Olympiad of the CUN College:</b> Host the first math contest at my school to promote 
+                    <li> (2019) <b> First Mathematics Olympiad of the CUN College:</b> Host the first math contest at my
+                        school to promote
                         interest in math and problem solving skills
                     </li>
 
-                    <li> (Since 2019) <b>Board member of Mathematical Olympiad in Tamaulipas </b> 
-                    (<a href= "https://www.matetam.com"> <abbr title = "Olimpiada de Matemáticas en Tamaulipas"> OMT </abbr> </a> ) : 
-                    working on the development and revision of exams in addition to providing training in different areas such as number theory, 
-                    algebra, geometry and combinatorics in preparation for the <a href= "https://www.ommenlinea.org"> <abbr title="Olimpiada Mexicana de Matemáticas"> OMM </abbr>. </a> 
+                    <li> (Since 2019) <b>Board member of Mathematical Olympiad in Tamaulipas </b>
+                        (<a href="https://www.matetam.com"> <abbr title="Olimpiada de Matemáticas en Tamaulipas"> OMT
+                            </abbr> </a> ) :
+                        working on the development and revision of exams in addition to providing training in different
+                        areas such as number theory,
+                        algebra, geometry and combinatorics in preparation for the <a href="https://www.ommenlinea.org">
+                            <abbr title="Olimpiada Mexicana de Matemáticas"> OMM </abbr>. </a>
                     </li>
                 </ul>
 
-                <li><h3>Code: </h3></li>
+                <li>
+                    <h3>Code: </h3>
+                </li>
 
                 <ul>
                     <li> <b> My Portfolio:</b> Using basic knowlegde about HTML, CSS & JavaScript, I coded this web page
-                        for <a href="https://buildyourfuture.withgoogle.com/programs/softwareproductsprint/">Software Product Sprint by Google</a>>.
+                        for <a href="https://buildyourfuture.withgoogle.com/programs/softwareproductsprint/">Software
+                            Product Sprint by Google</a>.
                     </li>
-                    
-                    <li> <b> Calculator:</b> Using basic knowledge about JAVA, 3 classmates and me coded a calculator capable of performing basic operations
+
+                    <li> <b> Calculator:</b> Using basic knowledge about JAVA, 3 classmates and me coded a calculator
+                        capable of performing basic operations
                         implements a postfixed algorithm and stacks.
                     </li>
                 </ul>
@@ -56,29 +70,36 @@
             <p>This is my portfolio.</p>
             <p>Click <a href="/hello">here</a> to see content created by server code.</p>
             <p>Click here to get a random message:</p>
-            <button onclick="addRandomGreeting()">Hello</button>
-            <div id="greeting-container"></div>
-            
+            <button onclick="addGreetingElmer();">Hello</button>
+            <p id="greeting-container"></p>
+
             <h2>Random Facts About Me</h2>
-            <p> Function not available </p>
+            <div id="fact-container" value="EN">
+                <img src="images/iconQuestionMark.png" alt="Question Mark" style="width:150px; height:150px">
+                <p>Interest in me? Click in the button to obtains random facts about me</p>
+            </div>
+            <button onclick="getRandomFactAboutMe();">NEW FACT!</button>
         </section>
+
 
         <section>
             <h2>Awards</h2>
             <ul>
-                <li><b> Bronze medal</b> (2018) and <b>Honorific Mention</b> (2019) in 
-                Mexican Mathematical Olympiad - 
-                <a href= "https://www.ommenlinea.org"> <abbr title="Olimpiada Mexicana de Matemáticas"> OMM </abbr> </a> </li>
+                <li><b> Bronze medal</b> (2018) and <b>Honorific Mention</b> (2019) in
+                    Mexican Mathematical Olympiad -
+                    <a href="https://www.ommenlinea.org"> <abbr title="Olimpiada Mexicana de Matemáticas"> OMM </abbr>
+                    </a> </li>
 
                 <li><b> 2 Bronze medals </b> (2018 & 2019) (2019) in Regional Northeast Mathematical Olympiad </li>
 
-                <li><b> Gold medal </b> (2020) in Regional Math Contest of Private School  </li>
+                <li><b> Gold medal </b> (2020) in Regional Math Contest of Private School </li>
 
-                <li><b> Bronze medal </b> (2020) in National Online Math Contest of Private School  </li>
+                <li><b> Bronze medal </b> (2020) in National Online Math Contest of Private School </li>
 
-                <li><b> Two time champion </b> (2018 & 2020) in Regional Contest of Science of the Technological Institute of Mexico  </li>
+                <li><b> Two time champion </b> (2018 & 2020) in Regional Contest of Science of the Technological
+                    Institute of Mexico </li>
 
-                <li><b> One of the 100 winners </b> (2014) in Knowlegde Olympiad for Youth   </li>
+                <li><b> One of the 100 winners </b> (2014) in Knowlegde Olympiad for Youth </li>
             </ul>
         </section>
 
@@ -87,58 +108,75 @@
             <ul>
                 <li> <b> Programming Language: </b> Java, MATLAB & C++</li>
                 <li> <b> Language: </b> Spanish(Native), English (Intermediate)</li>
-                <li> <b> General Problem Solving: </b> Solving mathematical problems and beginner in competitive programming</li>
+                <li> <b> General Problem Solving: </b> Solving mathematical problems and beginner in competitive
+                    programming</li>
             </ul>
         </section>
 
         <section>
             <h2>Soft skills</h2>
             <ul>
-                <li> <figure>
-                    <img src= decisiveness.png alt="decisive by Nithinan Tatah from the Noun Project" style = "width:50px; height:50px">
+                <li>
+                    <figure>
+                        <img src="images/decisiveness.png" alt="decisive by Nithinan Tatah from the Noun Project"
+                            style="width:50px; height:50px">
                         <figcaption>Decisiveness</figcaption>
                     </figure>
                 </li>
-                <li> <figure>
-                    <img src= AWUP.png alt="pressure by Kamin Ginkaew from the Noun Project" style = "width:50px; height:50px">
+                <li>
+                    <figure>
+                        <img src="images/AWUP.png" alt="pressure by Kamin Ginkaew from the Noun Project"
+                            style="width:50px; height:50px">
                         <figcaption>Ability to work under pressure</figcaption>
                     </figure>
                 </li>
-                <li> <figure>
-                    <img src= persistence.png alt="persistence by Lucas Kazmierski from the Noun Project" style = "width:50px; height:50px">
+                <li>
+                    <figure>
+                        <img src="images/persistence.png" alt="persistence by Lucas Kazmierski from the Noun Project"
+                            style="width:50px; height:50px">
                         <figcaption>Persistence</figcaption>
                     </figure>
                 </li>
-                <li> <figure>
-                        <img src= responsibility.png alt="responsibility by Wichai Wi from the Noun Project" style = "width:50px; height:50px">
+                <li>
+                    <figure>
+                        <img src="images/responsibility.png" alt="responsibility by Wichai Wi from the Noun Project"
+                            style="width:50px; height:50px">
                         <figcaption>Responsibility</figcaption>
                     </figure>
                 </li>
-                <li> <figure>
-                    <img src= teamwork.png alt="teamwork by Maxim Kulikov from the Noun Project" style = "width:50px; height:50px">
+                <li>
+                    <figure>
+                        <img src="images/teamwork.png" alt="teamwork by Maxim Kulikov from the Noun Project"
+                            style="width:50px; height:50px">
                         <figcaption>Teamwork</figcaption>
                     </figure>
                 </li>
-                
+
             </ul>
         </section>
-        
+
         <section>
             <h2> Personal photo album</h2>
             <p> Function not available </p>
         </section>
     </div>
-  </body>
-  <footer>
-        <h3> Contact with me </h3>
-        <a href= "mailto: elmeradrianv@outlook.com"> <img src= em1.png alt="My email" style = "width:30px; height:30px"> </a> 
-        <a href= "https://github.com/ElmerAdrianV"> <img src= gh1.png alt="My GitHub profile" style = "width:30px; height:30px"> </a> 
-        <a href= "https://www.linkedin.com/in/elmeradrianv/"> <img src= li1.png alt="My LinkedIn profile" style = "width:30px; height:30px"> </a> 
-        <a href= "https://twitter.com/ElmerAdrianV"> <img src= twt1.png alt="My Twitter profile" style = "width:30px; height:30px"> </a> 
-        <a href= "https://www.instagram.com/elmer.adrian.v/"> <img src= ig1.png alt="My Instagram profile" style = "width:30px; height:30px"> </a> 
+</body>
+<footer>
+    <h3> Contact with me </h3>
+    <a href="mailto: elmeradrianv@outlook.com"> <img src="images/em1.png" alt="My email"
+            style="width:30px; height:30px"> </a>
+    <a href="https://github.com/ElmerAdrianV"> <img src="images/gh1.png" alt="My GitHub profile"
+            style="width:30px; height:30px"> </a>
+    <a href="https://www.linkedin.com/in/elmeradrianv/"> <img src="images/li1.png" alt="My LinkedIn profile"
+            style="width:30px; height:30px"> </a>
+    <a href="https://twitter.com/ElmerAdrianV"> <img src="images/twt1.png" alt="My Twitter profile"
+            style="width:30px; height:30px"> </a>
+    <a href="https://www.instagram.com/elmer.adrian.v/"> <img src="images/ig1.png" alt="My Instagram profile"
+            style="width:30px; height:30px"> </a>
+    <h3> Obtain my resume</h3>
+    <a href="Elmer_Resume.pdf" download> <img src="images/rs1.png" alt="Download my resume"
+            style="width:30px; height:30px"> </a>
+    <p> Click <a href="indexES.html">aqu&iacute;</a> para ver la versi&oacute;n en espa&ntilde;ol!</p>
+</footer>
 
-        <h3> Obtain my resume</h3>
-        <a href="Elmer_Resume.pdf" download> <img src= rs1.png alt="Download my resume" style = "width:30px; height:30px"> </a>
-        <p> Click <a href="indexES.html">aqu&iacute;</a> para ver la versi&oacute;n en espa&ntilde;ol!</p>
-  </footer> 
 </html>
