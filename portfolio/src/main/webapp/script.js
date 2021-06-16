@@ -26,7 +26,7 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
-//Training of fecth()
+// Adds a greeting to me into the page. (for training)
 async function addGreetingElmer(){
 
     const responseFromServer = await fetch('/hello');
@@ -36,6 +36,7 @@ async function addGreetingElmer(){
     dateContainer.innerText = textFromResponse;
     
 }
+
 /** Fetches stats from the server and adds them to the page. */
 async function getRandomFactAboutMeEN(){
     const responseFromServer = await fetch('/randomFactsAboutMe');
