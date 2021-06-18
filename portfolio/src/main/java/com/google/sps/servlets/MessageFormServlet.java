@@ -17,8 +17,8 @@ public class MessageFormServlet extends HttpServlet {
         final String emailValue = request.getParameter("email-input");
         final String topicValue = request.getParameter("topic-input");
         final String messageValue = request.getParameter("message-input");
-
-        if (nameValue.equals("") && emailValue.equals("") && topicValue.equals("") && messageValue .equals("") {
+        
+        if (!nameValue.equals("") && !emailValue.equals("") && !topicValue.equals("") && !messageValue .equals("") ) {
             // Print the value so you can see it in the server logs.
             System.out.println("You submitted: ");
             System.out.println("NAME: " + nameValue);
@@ -31,7 +31,7 @@ public class MessageFormServlet extends HttpServlet {
             response.getWriter().println("NAME: " + nameValue);
             response.getWriter().println("EMAIL: " + emailValue);
             response.getWriter().println("TOPIC: " + topicValue);
-            response.getWriter().println("MESSAGE: " + messageValue);
+            response.getWriter().println("MESSAGE: " + messageValue);            
         }
     }
 }
