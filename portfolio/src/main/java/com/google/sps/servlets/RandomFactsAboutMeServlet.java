@@ -18,8 +18,7 @@ public class RandomFactsAboutMeServlet extends HttpServlet {
         // Create a ArrayList that will contains FactsAboutMe
         ArrayList<FactAboutMe> factsAboutMeEN = getFactsAboutMeEN();
         ArrayList<FactAboutMe> factsAboutMeES = getFactsAboutMeES();
-
-        // Select randomly a fact in the arrayList
+        
         String json = convertToJson(factsAboutMeEN, factsAboutMeES);
 
         response.setContentType("application/json;");
