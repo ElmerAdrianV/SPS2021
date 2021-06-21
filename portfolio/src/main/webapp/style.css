@@ -1,9 +1,89 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+* {
+  box-sizing: border-box;
+  background-color: #004d40;
 }
 
 #greeting-container {
   margin-top: 20px;
+}
+
+#title{
+    font-family: "Arial Black",  sans-serif;
+    font-size: 50px;
+    text-align: center;
+    background-color: #00251a;
+    color : white;     
+    border: 400px black;
+    padding: 30px;
+    margin: 40px  #39796b;
+}
+
+.sSkills li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+}
+a {
+    text-decoration: none;
+    color:white;
+}
+abbr{
+    text-decoration: none;
+    color:white;
+}
+body{  
+    font-family: Arial;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    color : white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.left_column {   
+  float: left;
+  width: 75%;
+  background-color: black;
+}
+
+/* Right column */
+.right_column {
+  float: left;
+  width: 25%;
+  background-color: black;
+  padding-left: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#redirect-ES{
+    font-family: "Arial",  sans-serif;
+    font-size: 25px;
+    height: 30px;
+    width: 100%;
+}
+#aqui{
+    font-family: "Arial Black",  sans-serif;
+    font-size: 28px;
+    height: 30px;
+    width: 100%;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
 }
