@@ -29,7 +29,7 @@ public class NewMessageServlet extends HttpServlet {
         Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
         KeyFactory keyFactory = datastore.newKeyFactory().setKind("Message");
 
-        if (!nameValue.equals("") && !emailValue.equals("") && !topicValue.equals("") && !messageValue .equals("") ) {
+        if (!nameValue.isEmpty() && !emailValue.isEmpty() && !topicValue.isEmpty() && !messageValue.isEmpty() ) {
             // Print the value so you can see it in the server logs.
             System.out.println("You submitted: ");
             System.out.println("NAME: " + nameValue);
