@@ -54,7 +54,6 @@ public class NewMessageServlet extends HttpServlet {
                     .build();
             
             datastore.put(messageEntity);
-            //response.sendRedirect("/index.html");
         }
 
   }
